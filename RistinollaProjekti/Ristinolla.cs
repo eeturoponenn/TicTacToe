@@ -51,32 +51,25 @@ namespace RistinollaProjekti
             }
         }
 
-        public void MitenPaattyi()
+        public void VoittoVaiTasapeli()
         {
             if
-              (ristinolla[0] == 1 ||
-               ristinolla[1] == 1 ||
-               ristinolla[2] == 1 ||
-               ristinolla[3] == 1 ||
-               ristinolla[4] == 1 ||
-               ristinolla[5] == 1 ||
-               ristinolla[6] == 1 ||
-               ristinolla[7] == 1 ||
-               ristinolla[8] == 1 ||
-               ristinolla[0] == 0 ||
-               ristinolla[1] == 0 ||
-               ristinolla[2] == 0 ||
-               ristinolla[3] == 0 ||
-               ristinolla[4] == 0 ||
-               ristinolla[5] == 0 ||
-               ristinolla[6] == 0 ||
-               ristinolla[7] == 0 ||
-               ristinolla[8] == 0)
+              (ristinolla[0] == -1 ||
+               ristinolla[1] == -1 ||
+               ristinolla[2] == -1 ||
+               ristinolla[3] == -1 ||
+               ristinolla[4] == -1 ||
+               ristinolla[5] == -1 ||
+               ristinolla[6] == -1 ||
+               ristinolla[7] == -1 ||
+               ristinolla[8] == -1)
             {
                 TestaaVoittaja();
+                
             }
-            else
+            else 
             {
+                TestaaVoittaja();
                 DialogResult dr = MessageBox.Show("Tasapeli!\n\nHaluatko pelata uudestaan?", "Vastaa", MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
@@ -243,7 +236,7 @@ namespace RistinollaProjekti
                     vuoro = vuoro == 0 ? 1 : 0;
                     p.Refresh();
                 }
-                MitenPaattyi();
+                VoittoVaiTasapeli();
             }
             
         }

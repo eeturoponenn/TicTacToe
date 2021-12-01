@@ -37,9 +37,10 @@
             // 
             // btnLisaa
             // 
-            this.btnLisaa.Location = new System.Drawing.Point(249, 182);
+            this.btnLisaa.Location = new System.Drawing.Point(166, 118);
+            this.btnLisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLisaa.Name = "btnLisaa";
-            this.btnLisaa.Size = new System.Drawing.Size(118, 54);
+            this.btnLisaa.Size = new System.Drawing.Size(79, 35);
             this.btnLisaa.TabIndex = 0;
             this.btnLisaa.Text = "Lisää";
             this.btnLisaa.UseVisualStyleBackColor = true;
@@ -47,46 +48,52 @@
             // 
             // tbNimi
             // 
-            this.tbNimi.Location = new System.Drawing.Point(219, 60);
+            this.tbNimi.Location = new System.Drawing.Point(146, 39);
+            this.tbNimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbNimi.Name = "tbNimi";
-            this.tbNimi.Size = new System.Drawing.Size(176, 26);
+            this.tbNimi.Size = new System.Drawing.Size(119, 20);
             this.tbNimi.TabIndex = 1;
             // 
             // tbVuosi
             // 
-            this.tbVuosi.Location = new System.Drawing.Point(219, 121);
+            this.tbVuosi.Location = new System.Drawing.Point(146, 79);
+            this.tbVuosi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbVuosi.Name = "tbVuosi";
-            this.tbVuosi.Size = new System.Drawing.Size(176, 26);
+            this.tbVuosi.Size = new System.Drawing.Size(119, 20);
             this.tbVuosi.TabIndex = 2;
+          
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 60);
+            this.label1.Location = new System.Drawing.Point(49, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nimi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 124);
+            this.label2.Location = new System.Drawing.Point(49, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 20);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Syntymavuosi";
             // 
             // Tiedot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 286);
+            this.ClientSize = new System.Drawing.Size(358, 186);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbVuosi);
             this.Controls.Add(this.tbNimi);
             this.Controls.Add(this.btnLisaa);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Tiedot";
             this.Text = "Tiedot";
             this.ResumeLayout(false);
