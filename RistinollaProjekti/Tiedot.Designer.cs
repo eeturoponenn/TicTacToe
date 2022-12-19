@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLisaa = new System.Windows.Forms.Button();
             this.tbNimi = new System.Windows.Forms.TextBox();
             this.tbVuosi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLisaa
             // 
             this.btnLisaa.Location = new System.Drawing.Point(166, 118);
-            this.btnLisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLisaa.Margin = new System.Windows.Forms.Padding(2);
             this.btnLisaa.Name = "btnLisaa";
             this.btnLisaa.Size = new System.Drawing.Size(79, 35);
             this.btnLisaa.TabIndex = 0;
@@ -49,7 +52,7 @@
             // tbNimi
             // 
             this.tbNimi.Location = new System.Drawing.Point(146, 39);
-            this.tbNimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbNimi.Name = "tbNimi";
             this.tbNimi.Size = new System.Drawing.Size(119, 20);
             this.tbNimi.TabIndex = 1;
@@ -57,11 +60,12 @@
             // tbVuosi
             // 
             this.tbVuosi.Location = new System.Drawing.Point(146, 79);
-            this.tbVuosi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbVuosi.Margin = new System.Windows.Forms.Padding(2);
             this.tbVuosi.Name = "tbVuosi";
             this.tbVuosi.Size = new System.Drawing.Size(119, 20);
             this.tbVuosi.TabIndex = 2;
-          
+            this.tbVuosi.Validating += new System.ComponentModel.CancelEventHandler(this.tbVuosi_Validating);
+            this.tbVuosi.Validated += new System.EventHandler(this.tbVuosi_Validated);
             // 
             // label1
             // 
@@ -83,6 +87,10 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Syntymavuosi";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Tiedot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,9 +101,10 @@
             this.Controls.Add(this.tbVuosi);
             this.Controls.Add(this.tbNimi);
             this.Controls.Add(this.btnLisaa);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Tiedot";
             this.Text = "Tiedot";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +117,6 @@
         private System.Windows.Forms.TextBox tbVuosi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
