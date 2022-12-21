@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
@@ -132,8 +133,11 @@ namespace RistinollaProjekti
             FileInfo ristinolla = new FileInfo("c:\\temp\\ristinolla.txt");     //Tekee alkuun ristinolla.txt tiedoston jos sitä ei ole jo.
             if (ristinolla.Exists == false)
             {
-                ristinolla.Create();
+                ristinolla.Create().Close();
+               
             }
+
+            
             
             setPelaajat();
 

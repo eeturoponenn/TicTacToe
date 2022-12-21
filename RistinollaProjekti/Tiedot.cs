@@ -63,7 +63,10 @@ namespace RistinollaProjekti
             
 
             string Nimi = tbNimi.Text;
+            
             int syntymavuosi = int.Parse(tbVuosi.Text);
+
+            
             p1.Nimi = Nimi;
 
             p1.Syntymavuosi = syntymavuosi;
@@ -85,6 +88,7 @@ namespace RistinollaProjekti
             SerializeJSON(pelaajat);
 
             paaformi.setPelaajat();
+            
             Close();
 
 
@@ -104,6 +108,11 @@ namespace RistinollaProjekti
                 e.Cancel = true;
                 tbVuosi.Select(0, tbVuosi.Text.Length);
                
+                this.errorProvider1.SetError(tbVuosi, errorMsg);
+            }
+
+            if(tbVuosi.Text == "")
+            {
                 this.errorProvider1.SetError(tbVuosi, errorMsg);
             }
         }
